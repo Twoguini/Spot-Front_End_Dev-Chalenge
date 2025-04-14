@@ -1,19 +1,19 @@
 import { useState } from "react"
 import { UserAvatar } from "./UserAvatar";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function NavBar() {
   const [ open, setOpen ] = useState(false);
   const navigate = useNavigate();
 
   const logOut = () => {
-    navigate('/login');
+    navigate('/');
   };
 
   return (
     <>
-      <nav className="w-full bg-white shadow-sm shadow-orange-300 px-4 py-3 flex items-center justify-between">
-        <div className="text-xl font-bold text-orange-400">
+      <nav className="w-full bg-white px-3 py-3 flex items-center justify-between justify-self-center border-b-2 border-gray-200 rounded-t-lg">
+        <div className="text-2xl font-bold text-black">
           DashBoard
         </div>
         <div className="flex items-center space-x-4">

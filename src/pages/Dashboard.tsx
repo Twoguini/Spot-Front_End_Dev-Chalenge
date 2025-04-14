@@ -1,4 +1,4 @@
-import NavBar from "../components/Navbar"
+import { DashboarCards } from "../components/DashboardCards";
 import { useEffect } from "react";
 
 export function DashBoard() {
@@ -8,6 +8,8 @@ export function DashBoard() {
     }, []);
 
   return(
-    <NavBar />
+    <div className="fixed flex justify-center w-full h-full bg-gray-100">
+      <DashboarCards />
+    </div>
   )
 }
