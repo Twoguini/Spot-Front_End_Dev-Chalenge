@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export function Login() {
@@ -6,6 +6,10 @@ export function Login() {
   const [pass, setPass] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = "Login";
+  }, []);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();

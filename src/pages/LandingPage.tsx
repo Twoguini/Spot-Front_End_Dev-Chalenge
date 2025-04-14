@@ -10,6 +10,10 @@ export function LandingPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    document.title = "Landing-Page";
+  }, []);
+
+  useEffect(() => {
     containerRef.current?.focus();
   }, []);
 
