@@ -2,7 +2,11 @@ import { useState } from "react"
 import { UserAvatar } from "./UserAvatar";
 import { useNavigate } from "react-router-dom";
 
-function NavBar() {
+interface UseNavbarProps {
+  ProjectName: string;
+};
+
+function NavBar({ProjectName}: UseNavbarProps) {
   const [ open, setOpen ] = useState(false);
   const navigate = useNavigate();
 
@@ -13,11 +17,14 @@ function NavBar() {
   return (
     <>
       <nav className="w-full bg-white px-3 py-3 flex items-center justify-between justify-self-center border-b-2 border-gray-200 rounded-t-lg">
-        <div className="text-2xl font-bold text-black">
+        <div className="text-2xl font-bold text-gray-700">
           DashBoard
         </div>
+        <div className="text-xl font-bold text-gray-700 -ml-[7%]">
+          {ProjectName}
+        </div>
         <div className="flex items-center space-x-4">
-          <UserAvatar open={open} setOpen={setOpen} />
+          <UserAvatar open={open} setOpen={setOpen} BgOrange={true} />
         </div>
       </nav>
 
