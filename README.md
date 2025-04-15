@@ -1,54 +1,81 @@
-# React + TypeScript + Vite
+# 📊 Spot MKT Challenge - Front-End
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was developed as a solution for the Spot MKT front-end challenge.
+The application consists of a dashboard interface with login, using React + Vite + Tailwind CSS.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Technologies Used
 
-## Expanding the ESLint configuration
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React Router](https://reactrouter.com/)
+- [Google Fonts (Montserrat)](https://fonts.google.com/specimen/Montserrat)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Installation & Running Locally
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Twoguini/Spot-Front_End_Dev-Chalenge
+cd spot-dashboard
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
 ```
+
+### 3. Start the development server
+
+```bash
+npm run dev
+```
+
+Then open your browser at: [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 📁 Folder Structure
+
+```
+src/
+├── components/
+│   ├── Navbar.tsx
+│   ├── UserAvatar.tsx
+│   ├── Calendar.tsx
+│   ├── MetricsGraphic.tsx
+│   └── DashboardCards.tsx
+├── pages/
+│   ├── LandingPage.tsx
+│   ├── DashBoard.tsx
+│   └── Login.tsx
+├── App.tsx
+└── main.tsx
+```
+
+---
+
+## 📌 Features
+
+- ✅ Animated transitions between Landing Page and Login
+- ✅ Login check with mock credentials from `.env`
+- ✅ Dashboard with:
+  - Metrics overview
+  - Performance chart
+  - Calendar of actions
+  - History and notifications
+  - User configuration section
+
+---
+
+## 📄 License
+
+This project is for technical assessment purposes only.
+
+---
