@@ -11,20 +11,20 @@ interface DashboarCardsProps {
 export function DashboarCards({ProjectName}: DashboarCardsProps) {
   return(
     
-    <div className="mt-[8%] md:mt-[2%] w-7/10 md:w-8/10 shadow-lg shadow-gray-300">
+    <div className="md:overflow-hidden mt-[8%] md:mt-[2%] w-9/10 md:w-8/10 shadow-lg shadow-gray-300 h-fit rounded-b-lg"> 
       {/* Navbar Component */}
       <NavBar ProjectName={ProjectName} />
       {/* Columns Div*/}
-      <div className="w-full h-full bg-gray-100 columns-2 gap-4 flex justify-center">
+      <div className="w-full bg-gray-100 md:gap-4 md:flex md:justify-center">
         {/* Left Column Div */}
-        <div className="w-6/13 h-full mt-4">
+        <div className="mx-auto md:mx-0 md:w-6/13 h-fit mt-2">
           {/* OverView */}
           <div className="w-full h-fit bg-white py-2 rounded-lg">
             <div className="flex justify-between text-gray-700 hover:text-orange-400">
               <div className="ml-3 font-bold">Visão Geral</div>
               <div className="mr-3 font-extrabold">&gt;</div>
             </div>
-            <div className="columns-3 flex justify-evenly">
+            <div className="flex justify-evenly">
               <div className="text-center text-gray-700 hover:text-orange-400 mt-3">
                 <div className="font-semibold font-Montserrat">R$5000.00</div>
                 <div className="text-xs font-medium">Receita</div>
@@ -57,12 +57,12 @@ export function DashboarCards({ProjectName}: DashboarCardsProps) {
             <Calendar />
           </div>
           {/* Activity History */}
-          <div className="w-full h-fit bg-white p-3 rounded-lg mt-4">
+          <div className="w-full h-fit bg-white px-3 pt-3 rounded-lg mt-4">
             <div className="flex justify-between text-gray-700 hover:text-orange-400">
               <div className="font-bold">Histórico de Atividades</div>
               <div className="font-extrabold">&gt;</div>
             </div>
-            <div className="columns-2 mt-3 flex justify-between">
+            <div className="mt-3 flex justify-between">
               <ul className="list-disc font-medium text-sm list-inside">
                 <li>Campanha Editada</li>
                 <li>Parceria Primo Rico Editado</li>
@@ -78,7 +78,7 @@ export function DashboarCards({ProjectName}: DashboarCardsProps) {
           {/* End Left Column Div */}
         </div>
         {/* Rigth Column Div */}
-        <div className="w-6/13 h-full mt-4">
+        <div className="mx-auto md:mx-0 md:w-6/13 h-full mt-2">
           {/* Metrics Graphic */}
           <div className="w-full h-fit bg-white p-3 rounded-lg justify-center flex">
               <MetricsGraphic />

@@ -8,7 +8,7 @@ export function DashBoard() {
     }, []);
 
   return(
-    <div className="fixed flex justify-center w-full min-h-full bg-gray-200">
+    <div className="w-full min-h-screen bg-gray-200 flex justify-center"> 
       <DashboarCards ProjectName="Projeto - Novo Dev da SPOT"/>
     </div>
   )

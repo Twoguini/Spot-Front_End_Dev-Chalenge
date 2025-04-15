@@ -16,11 +16,11 @@ function NavBar({ProjectName}: UseNavbarProps) {
 
   return (
     <>
-      <nav className="w-full bg-white px-3 py-3 flex items-center justify-between justify-self-center border-b-2 border-gray-200 rounded-t-lg">
-        <div className="text-2xl font-bold text-gray-700">
+      <nav className="w-full bg-white px-3 py-3 flex items-center justify-between border-b-2 border-gray-200 rounded-t-lg">
+        <div className="md:text-2xl text-xl font-bold text-gray-700">
           DashBoard
         </div>
-        <div className="text-xl font-bold text-gray-700 -ml-[7%]">
+        <div className="hidden text-xl font-bold text-gray-700 -ml-[7%] md:block">
           {ProjectName}
         </div>
         <div className="flex items-center space-x-4">
@@ -28,7 +28,7 @@ function NavBar({ProjectName}: UseNavbarProps) {
         </div>
       </nav>
 
-      {open && (<div id="userOptions" className={`rounded-md fixed p-2 right-0 bg-white shadow transform transition-transform duration-300 ease-in-out z-50 ${open? 'translate-x-0' : 'translate-x-full'}`}>
+      {open && (<div id="userOptions" className={`rounded-md fixed p-2 right-0 bg-white shadow transform transition-transform duration-300 ease-in-out z-50 ${open? '-translate-x-[88%] md:-translate-x-[200%]' : 'translate-x-full'}`}>
         <button className="font-bold text-sm rounded-full w-14 hover:bg-orange-300 text-center" onClick={logOut}>Sair</button>
       </div>)}
     </>
